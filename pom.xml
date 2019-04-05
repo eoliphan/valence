@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>valence</groupId>
   <artifactId>valence</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.2</version>
   <name>valence</name>
   <dependencies>
     <dependency>
