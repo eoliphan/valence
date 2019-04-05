@@ -8,6 +8,13 @@ for the Ion [cast logging](https://docs.datomic.com/cloud/ions/ions-monitoring.h
 
 
 ## Usage
+Add to your deps.edn 
+```clojure
+...
+:deps {{:git/url "https://github.com/eoliphan/valence.git"
+        :tag "0.1.0"}}
+
+```
 
 ### Timbre Logging
 ```clojure
@@ -27,7 +34,18 @@ for the Ion [cast logging](https://docs.datomic.com/cloud/ions/ions-monitoring.h
   (log/debug "The value of x is " x)) 
   
 ```
-TODO: Add output examples
+The initial release maps :error level messages to `(cast/alert)` and all others to `(cast/event)`, subsequent versions
+will allow more fine-grained control.  Messages are "cast" with the following format
+```clojure
+{:msg   ...
+ :ns    ...
+ :level ...
+ :file  ...
+ :line  ...
+ :err   <optional stack trace for exception> }
+
+```
 
 ### Reitit Routing
+**COMING SOON**
 
