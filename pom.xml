@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>valence</groupId>
+  <artifactId>valence</artifactId>
+  <version>0.1.0</version>
+  <name>valence</name>
+  <dependencies>
+    <dependency>
+      <groupId>org.clojure</groupId>
+      <artifactId>clojure</artifactId>
+      <version>RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>com.taoensso</groupId>
+      <artifactId>timbre</artifactId>
+      <version>4.10.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.datomic</groupId>
+      <artifactId>ion</artifactId>
+      <version>0.9.28</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <sourceDirectory>resources</sourceDirectory>
+  </build>
+  <repositories>
+    <repository>
+      <id>clojars</id>
+      <url>https://repo.clojars.org/</url>
+    </repository>
+    <repository>
+      <id>datomic-cloud</id>
+      <url>s3://datomic-releases-1fc2183a/maven/releases</url>
+    </repository>
+  </repositories>
+</project>
