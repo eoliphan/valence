@@ -12,7 +12,7 @@ Add to your deps.edn
 ```clojure
 ...
 :deps {{:git/url "https://github.com/eoliphan/valence.git"
-        :tag "0.1.0"}}
+        :tag "0.1.2"}}
 
 ```
 
