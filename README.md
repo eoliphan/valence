@@ -1,10 +1,13 @@
 # valence
 
-A small set of utilities for working with Datomic Ions
+A set of utilities for working with Datomic Cloud and Ions.  Includes integrations with some common libraries as well as implementations of a few features that are similar to what's available in on-prem.
+
+This is also a bit of an experiment with better ways to manage libs with Clojure deps.  Being liberated from .jars makes even more fine grained libraries more feasible. So here we'll try to allow you to pull in exactly what you need and no more.
 
 * Logging: A [Timbre](https://github.com/ptaoussanis/timbre) appender 
 for the Ion [cast logging](https://docs.datomic.com/cloud/ions/ions-monitoring.html#java-logging)
 * Reitit-based Routing: COMING SOON
+* Datomic log processing (a lá on-prem's tx-report-queue): COMING SOON
 
 
 ## Usage
@@ -48,4 +51,9 @@ will allow more fine-grained control.  Messages are "cast" with the following fo
 
 ### Reitit Routing
 **COMING SOON**
+
+### Log processing
+**COMING SOON**
+Datomic On-prem's `tx-report-queue` function provided a nice way to add reactivity, event-oriented integrations, etc to your Datomic apps.  It's not available in Cloud, but we also have all of AWS's goodness and the Datomic Log API at our disposal.  This lib leverages AWS Step Functions and a liberal dose of Onyx-inspired data driven configuration to make it relatively easy for you to consume the log with a bit of data and your own functions. 
+
 
